@@ -1,0 +1,8 @@
+#!/bin/sh
+
+fbcp &
+until ping -c1 data ; do :; done
+
+echo "loading WPE with url: $WPE_URL"
+sleep 15s
+WPELauncher $WPE_URL
